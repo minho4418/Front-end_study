@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<body>
+    <h2>로그인</h2>
+    <!-- button의 submit기능이 서버측에 form안의 name과 value를 전송 -->
+    <!-- form : 폼 태그의 속성에서 사용자가 입력한 자료를 서버로 어떤 방식으로 넘길 지, 어떤 프로그램을 이용해 처리할 것인지 지정할 수 있다. -->
+    <form action="">
+    <table border="4">
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" name="userid"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="passwd"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">로그인</button>
+                <!-- 초기화 -->
+                <button type="reset">취소 </button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

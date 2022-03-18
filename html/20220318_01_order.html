@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품주문서</title>
+</head>
+<body>
+    <h2>상품주문서</h2>
+    <form action="">
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>이름 <input type="text" placeholder="여백없이입력"></li>
+                <li>연락처 <input type="tel" placeholder="연락가능한번호"></li>            
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송지정보</legend>
+            <ul>
+                <li> <label for="addr">주소 </label>
+                    <input type="text" id="addr" class="" name="addr">
+                </li>
+                <li>전화번호 <input type="text"></li>
+                <li>메모 <textarea name="" id="" cols="30" rows="10"></textarea></li>
+            </ul>
+        </fieldset>
+        <button>주문하기</button>
+        <ul>
+            <li>
+                <input type="checkbox" name="orderlist" value="apple">사과
+                <input type="number" min="0" max="999">개
+            </li>
+            <li>
+                <input type="checkbox" name="orderlist" value="grape">포도
+                <input type="number" min="0" max="999">개
+            </li>
+            <li>
+                <input type="checkbox" name="orderlist" value="strawberry">딸기
+                <input type="number" min="0" max="999">개
+            </li>
+        </ul>
+        <button>주문하기</button>
+        <button type="reset">다시작성</button>
+    </form>
+</body>
+</html>
