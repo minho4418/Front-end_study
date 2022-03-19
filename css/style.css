@@ -1,0 +1,23 @@
+/* 전체선택자 */
+*{
+    background-color: antiquewhite;
+}
+/* 태그선택자 */
+h2 {
+    background-color: brown;
+    color: tomato;
+    border: 3px slateblue solid;
+    padding: 10px 5px;
+}
+/* 아이디 선택자 */
+#content1{
+    color: yellow;
+    background-color: violet;
+    padding: 5px;
+    font-size: small;
+}
+/* 클래스 선택자 */
+.content{
+    color: aliceblue;
+    background-color: rgb(53, 63, 38);
+}

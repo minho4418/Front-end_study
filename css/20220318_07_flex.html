@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cbox{
+            width: 100px;
+            height: 100px;
+            color: aliceblue;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #box1{
+            background-color: aqua;
+        }
+        #box2{
+            background-color: blueviolet;
+        }
+        #box3{
+            background-color: red;
+        }
+        #box4{
+            background-color: rgb(62, 138, 173);
+        }
+        #box5{
+            background-color: rgb(198, 224, 51);
+        }
+        #box6{
+            background-color: rgb(44, 218, 131);
+        }
+        .box{
+            /* 보이는포인트의 100%를 사용 */
+            height: 100vh;
+            /* 박스모델 : flex */
+            display: flex;
+            /* 기준축 결정 : defalt값 row(행) */
+            flex-direction: row;
+            /* 기준측에 배치 */
+            justify-content: space-around;
+            /* 다음줄로 이동여부 */
+            flex-wrap: wrap;
+            /* 반대측 배치 */
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cbox" id="box1">1</div>
+        <div class="cbox" id="box2">2</div>
+        <div class="cbox" id="box3">3</div>
+        <div class="cbox" id="box4">4</div>
+        <div class="cbox" id="box5">5</div>
+        <div class="cbox" id="box6">6</div>
+    </div>
+</body>
+</html>

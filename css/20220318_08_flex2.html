@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo{
+            width: 100px;
+        }
+        #header{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        footer{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: 1px #ccff90 solid;
+            height: 50px;
+            background-color: #ffc4ff;
+        }
+        .lanclass {
+            width: 200px;
+            height: 100px;
+        }
+        .java{
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;
+        }
+        .python{
+            background-color:burlywood;
+            text-align: center;
+            line-height: 100px;
+        }
+        .oracle{
+            background-color:thistle;
+            text-align: center;
+            line-height: 100px;
+        }
+        .network{
+            background-color:darkgray;
+            text-align: center;
+            line-height: 100px;
+        }
+        nav a:link, nav a:visited {
+            background-color: #ce93d8;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a:active {
+            background-color: cornflowerblue;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div><img class="logo" src="../html/images/logo.JPG" alt=""> </div>
+        <div><h2>이젠컴퓨터학원</h2> </div>
+        <div><a href="">로그인</a>
+            <a href="">로그아웃</a>
+        </div>
+    </header>
+    <nav>
+        <div><a href="">학원소개</a> </div>
+        <div><a href="">수강신청</a> </div>
+        <div><a href="">수강후기</a> </div>
+        <div><a href="">Q/A</a> </div>
+        <div><a href="">오시는길</a> </div>
+    </nav>
+    <section>
+        <article class="lanclass java">자바반</article>
+        <article class="lanclass python">파이쎤반</article>
+        <article class="lanclass oracle">오라클반</article>
+        <article class="lanclass network">네트워크반</article>
+    </section>
+    <footer>
+        <address>신림역 8번출구</address>
+        <div>전화번호</div>
+        <div>사업자등록번호</div>
+    </footer>
+</body>
+</html>
