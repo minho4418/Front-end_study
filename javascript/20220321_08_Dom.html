@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userid{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function loginCheck(){
+            var userid = document.getElementById('userid');
+            var passwd = document.getElementById('passwd');
+            console.log(userid);
+
+            if (userid.value==''){
+                alert('아이디를 입력해주세요!');
+                userid.focus();
+            }else if (passwd.value==''){
+                alert('비밀번호를 입력해주세요!');
+                passwd.focus();
+            }else{
+                alert('데이터 전송');
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    아이디 <input type="text" id = "userid"><br>
+    패스워드 <input type="password" id = "passwd"><br>
+    <!-- 로그인 버튼을 클릭했을때 유효성 체크 -->
+    <button onclick="loginCheck()">로그인</button>
+    
+</body>
+</html>

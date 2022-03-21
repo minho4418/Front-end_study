@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+    <script>
+        //1~10 출력
+        // for(var i=1; i<11; i++){
+        //     console.log(i);
+        //     document.write('<li>'+i+'</li>');
+        // }
+
+        //구구단 출력
+        // for(var i=2; i<10; i++){
+        //     for(var j=1;j<10;j++){
+        //         console.log(i + ' * ' + j + ' = ' + i*j);
+        //         document.write(i + ' * ' + j + ' = ' + i*j+'<br>');
+        //     }
+        // }
+
+        //1~10 짝홀수 출력(짝수는 red, 홀수는 blue)
+        // var i : 글로벌 변수(호스팅가능)
+        // let i : {}안의 지역변수(호스팅 안됨)
+        for(let i=1; i<11; i++){
+            if (i%2==0){
+                console.log(i + ':짝수');
+                document.write('<label class = "red">' +i+':짝수 </label><br>');
+            }
+            else{
+                console.log(i + ':홀수');
+                document.write('<label class = "blue">' +i+':홀수 </label><br>');
+            }  
+        }
+        //console.log(i);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

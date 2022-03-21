@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수선언문 : 호이스팅이 된다.
+        // function test(){
+        //     alert('테스트 함수');
+        // }
+        // test();
+        
+        //함수표현식(익명) : 호이스팅이 안된다.
+        var funtest = function(){
+            alert('함수 표현식');
+        }
+        console.log(funtest);
+        console.log(typeof funtest);
+        //funtest();
+
+        //함수에 매개변수 넘기기
+        //매개변수의 default값
+        // function study(subject='자바'){
+        //     alert('오늘 배울 내용은 : ' + subject);
+        // }
+        // study();
+
+        //함수의 표현식
+        // var study = function(subject='ㅇㅇ'){
+        //     alert('오늘 배울 내용은 : ' + subject);
+        // }
+        // study();
+
+         //함수의 표현식(화살표 함수)
+        //  var study = (subject='자바') => {
+        //      alert(`오늘배울 내용은 ${subject}`);
+        //  }
+        //  study('ㅇ바');
+
+         //반환값이 있는 함수
+        function add(a, b){
+            return a+b;
+        }
+        console.log(add(30, 20));
+
+        // //함수표현식(화살표 함수)
+        // var add = (a,b)=>a+b; //a,b를 매개변수로 받아서 a+b를 반환
+        // console.log(add(30,20));
+        
+        //Object반환
+        // const student = function(name, score){
+        //     return {
+        //         name,
+        //         score,
+        //     };
+        // }
+        // const student = (name, score)=>({
+        //         name,
+        //         score,
+        // });
+        // console.log(student('홍길동', 100));
+
+        //숫자 카운팅 함수
+        //함수를 delay후에 한번만 실행
+        // setTimeout(function(){
+        //     console.log('자바');
+        // },3000);
+
+        // //반복실행 하는 함수
+        // var timeprint = setInterval(()=>
+        //     console.log('자바스트립트!')
+        // ,1000); //1초 의미
+        // //반복실행 하는 함수 중지
+        // setTimeout(()=>{
+        //     clearInterval(timeprint);
+        // },5000);
+
+        var timeCheck = () => {
+            var cnt =0; // 1씩증가하는 변수
+            var cplus = setInterval(() => {
+                console.log(++cnt);
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(cplus);
+                console.log('멈춥니다.');
+            }, 5000);
+        };
+        timeCheck();
+
+        
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

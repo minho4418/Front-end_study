@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function selectSubject(){
+            alert('완료');
+            var subject = document.getElementsByName('subject');
+            console.log(subject);
+            for(var i =0;i<subject.length;i++){
+                if(subject[i].checked){
+                    console.log(subject[i].value);
+                    document.getElementById("divSel").innerHTML = `${subject[i].value}을 좋아합니다`;
+                    break;
+                };
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>가장좋아하는 과목</legend>
+        <!-- name속성으로 엘리먼트를 하나로 묶는다 -->
+        <input type="radio" name="subject" value="java">자바
+        <input type="radio" name="subject" value="oracle">오라클
+        <input type="radio" name="subject" value="JS">JS
+        <input type="radio" name="subject" value="HTML5">HTML5
+    </fieldset>
+    <button onclick="selectSubject()">선택완료</button>
+    <div id="divSel"></div>
+</body>
+</html>

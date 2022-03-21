@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //key, value
+        // var item = {
+        //     itemcode : '8801',
+        //     itemname : '새우깡',
+        //     price : 1200
+        // };
+        // console.log(item);
+        // console.log(typeof item);
+        // console.log(item['itemcode']);
+        // console.log(item.itemcode); //간단
+
+         //변수를 이용해서 값세팅
+        //   var itemcode = '8801';
+        //   var itemname = '새우깡';
+        //   var price = 1200;
+        //   let item = {
+        //       itemcode : itemcode,
+        //       itemname : itemname,
+        //       price : price
+        //   };
+        //키와 변수명이 같으면 한쪽은 생략가능
+        //  let item = {
+        //      itemcode,
+        //      itemname,
+        //      price
+        //  };
+        //  console.log(item);
+        //  console.log(item.itemname);
+
+        //  var itemkeys = Object.keys(item);
+        //  for (var i =0; i<itemkeys.length;i++){
+        //      document.write(item[itemkeys[i]] +'<br>');
+        //  };
+        //  itemkeys.forEach(element => {
+        //      document.write(item[element]+'<br>')
+        //  });
+
+        //객체의 배열
+        var arr = [
+            {
+                itemcode : '8801',
+                itemname : '새우깡',
+                price : 1200
+            },
+            {
+                itemcode : '8802',
+                itemname : '감자깡',
+                price : 1300
+            },
+            {
+                itemcode : '8803',
+                itemname : '고래밥',
+                price : 1400
+            }
+        ];
+        var arrkeys = Object.keys(arr[0]);
+        arr.forEach(element => {
+            console.log(element.itemcode);
+            console.log(element.itemname);
+            console.log(element.price);
+            document.write(element.itemcode + '<br>');
+            document.write(element.itemname + '<br>');
+            document.write(element.price + '<br>');
+        });
+        arrkeys.forEach(element => {
+            console.log(arr[1][element]);
+            document.write(arr[1][element] + '<br>');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
