@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //가입버튼을 클릭했을때 
+        function joinCheck(){
+            // var userid = document.getElementById('userid');
+            // var passwd = document.getElementById('passwd');
+            // var repasswd = document.getElementById('repasswd');
+            // var email = document.getElementById('email');
+            var userid = frmJoin.userid;   //from의 이름과 엘리먼트의 이름으로 선택 
+            var passwd = frmJoin.passwd;
+            var repasswd = frmJoin.repasswd;
+            var email = frmJoin.email;
+
+            console.log(userid.value);
+
+            if (userid.value == ''){
+                alert('아이디입력!');
+                userid.focus();
+            }else if (passwd.value == ''){
+                alert('비밀번호입력!');
+                passwd.focus();
+            }else if (repasswd.value == ''){
+                alert('비밀번호 확인 입력!');
+                repasswd.focus();
+            }else if (passwd.value != repasswd.value){
+                alert('비밀번호 일치 하지 않습니다');
+                repasswd.focus();
+            }else if (email.value == ''){
+                alert('이메일입력!');
+                email.focus();
+            }else
+                frmJoin.submit();
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form action="" name="frmJoin" id="frmJoin">
+        아이디 <input type="text" name="userid" id="userid"> <br>
+        비밀번호 <input type="password" name="passwd" id ="passwd"> <br>
+        비밀번호확인 <input type="password" id="repasswd"> <br>
+        이메일 <input type="email" name="email" id="email"> <br>
+        <button type="button" onclick="joinCheck()">가입</button>
+    </form>
+</body>
+</html>

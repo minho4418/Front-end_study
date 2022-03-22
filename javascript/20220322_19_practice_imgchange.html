@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImg(element){
+            document.getElementById('imgAnimal').src = element.value;
+        }
+
+    </script>
+</head>
+<body>
+    <h2>이미지 바꾸기</h2>
+    <!-- 버튼을 누를때마다 해당하는 이미지가 보이게 -->
+    <button onclick="changeImg(this)" value="../html/images/animal.jpg">원숭이</button>
+    <button onclick="changeImg(this)" value="../html/images/butterfly.png">나비</button>
+    <hr>
+    <img src="" alt="" width="200" id="imgAnimal">
+</body>
+</html>

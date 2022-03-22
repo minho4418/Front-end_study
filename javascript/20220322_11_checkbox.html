@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //버튼을 클릭했을때
+        function foodSelect(){
+            var foods = document.getElementsByClassName("food");
+            console.log(foods);
+            let str = '';
+            for(var i=0; i<foods.length; i++){
+                if (foods[i].checked){
+                    str += '<li>' + foods[i].value + '</li>';
+                }
+            }
+            document.getElementById('divSel').innerHTML =str;
+        }
+
+    </script>
+</head>
+<body>
+    <h2>좋아하는 음식</h2>
+    <fieldset>
+        <legend>food</legend>
+        <input type="checkbox" name="food" class="food" id="food1" value="자장면">자장면
+        <input type="checkbox" name="food" class="food" id="food2" value="짬뽕">짬뽕
+        <input type="checkbox" name="food" class="food" id="food3" value="탕수육">탕수육
+        <input type="checkbox" name="food" class="food" id="food4" value="양장피">양장피
+    </fieldset>
+    <button onclick="foodSelect()">선택리스트</button>
+    <div id="divSel"></div>
+</body>
+</html>

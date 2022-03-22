@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #seljob{
+            color: blueviolet;
+        }
+    </style>
+    <script>
+        //라디오버튼을 클릭했을때
+        //매개변수 : this(내자신)
+        function selectJob(ele){
+            // console.log(ele);
+            // console.log(ele.value);
+            // var job = document.getElementById('jobs').value;
+            // console.log(job);
+
+            var span = document.createElement('span');
+            // console.log(span);
+            span.id = 'seljob';
+            span.innerText = '나의 직업은 '+ ele.value;
+            // console.log(span);
+            
+            // document.getElementById('myjob').appendChild(span);
+
+            var myjob = document.getElementById('myjob');
+            myjob.innerHTML=''; //비우기
+            myjob.appendChild(span); //추가
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>나의 직업</legend>
+        <input type="radio" name="jobs" value="웹프로그래머" onclick="selectJob(this)">웹프로그래머
+        <input type="radio" name="jobs" value="응용프로그래머" onclick="selectJob(this)">응용프로그래머
+        <input type="radio" name="jobs" value="DB관리자" onclick="selectJob(this)" >DB관리자
+        <input type="radio" name="jobs" value="안드로이드개발자" onclick="selectJob(this)">안드로이드개발자
+    </fieldset>
+    <p id="myjob"></p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(image) {
+            // e.preventDefault();
+            var a = document.createElement('img');
+            a.width = '200';
+            if(image =='돼지'){
+                img.innerHTML='';
+                console.log(a)
+                a.src = '../html/images/dd.jpg';
+                document.getElementById('img').appendChild(a);
+            }
+            else if(image =='원숭이'){
+                img.innerHTML='';
+                console.log(a)
+                a.src = '../html/images/11.png';
+                document.getElementById('img').appendChild(a);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>이미지 바꾸기</h2>
+    <!-- 버튼을 누를때마다 해당하는 이미지가 보이게 -->
+    <td>
+        <tr>
+            <button onclick="change('돼지')">돼지</button>
+            <button onclick="change('원숭이')">원숭이</button>
+        </tr>
+    </td>
+    <hr>
+    <div id="img"> </div>
+</body>
+</html>

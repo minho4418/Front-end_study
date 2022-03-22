@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function move(site) {
+            console.log(site);
+            //자바스크립트 이동
+            // location.href = 'https://www.naver.com/';
+            if(site == 'naver'){
+                window.open('https://www.naver.com/'); // 새창에서 열기
+            }
+            else if(site == 'google'){
+                location.href = 'https://www.google.co.kr/';
+            }
+            else if(site == 'super'){
+                location.href = 'https://namu.wiki/w/%EC%8A%88%ED%8D%BC';
+            }
+            else{
+                location.href = 'https://namu.wiki/w/%EC%BB%B4%ED%93%A8%ED%84%B0';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>버튼의 onclick이벤트</h2>
+    <table border="1">
+        <tr>
+            <td><button onclick="move('naver')">네이버</button></td>
+            <td><button onclick="move('google')">구글</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="move('super')">슈퍼</button></td>
+            <td><button onclick="move('computer')">컴퓨터</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

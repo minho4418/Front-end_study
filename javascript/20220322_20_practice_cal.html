@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rec(){
+            var math = document.getElementsByName('math');
+            var row = document.getElementById('row').value;
+            var col = document.getElementById('col').value;
+            console.log(row);
+            console.log(col);
+
+            var span = document.createElement('span');
+            span.id = 'math1';
+
+            if(math[0].checked==true){
+                span.innerText = '넓이는  '+ row*col;
+
+                var mymath = document.getElementById('mymath');
+                mymath.innerHTML=''; //비우기
+                mymath.appendChild(span); //추가
+                }
+            else if(math[1].checked==true){
+                span.innerText = '넓이는  '+ row*col*0.5;
+
+                var mymath = document.getElementById('mymath');
+                mymath.innerHTML=''; //비우기
+                mymath.appendChild(span); //추가
+                }
+            }
+
+    </script>
+</head>
+<body>
+    <h2>넓이구하기</h2>
+    <fieldset>
+        <input type="radio" name="math" value="rectangle" > 사각형
+        <input type="radio" name="math" value="triangle" > 삼각형
+    </fieldset>
+    가로 <input type="text" id="row"><br>
+    세로 <input type="text" id="col"><br>
+    <button onclick="rec()">구하기</button>
+    <hr>
+    <div id="mymath"></div>
+</body>
+</html>

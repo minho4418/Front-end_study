@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //로그인 체크 함수
+        function loginCheck(e){
+            e.preventDefault(); //기본이벤트제거(submit)
+            //아이디, 비밀번호 출력
+            var userid = document.getElementById('userid');
+            var passwd = document.getElementById('passwd');
+            console.log(userid.value);
+            console.log(passwd.value);
+            //유효성체크
+            if (userid.value==''){
+                alert('아이디를 입력해 주세요');
+                userid.focus();
+            }else if (passwd.value ==''){
+                alert('비밀번호를 입력해 주세요');
+                passwd.focus();
+            }else {
+                document.getElementById('frmLogin').submit();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h2>로그인</h2>
+    <!-- form태그 안의 name의 value를 submit이 일어났을때 action으로 전송 
+        action이 공백이면 자신을 다시 호출
+    -->
+    <form action="" id="frmLogin">
+        아이디 <input type="text" name="userid" id="userid"> <br>
+        비밀번호 <input type="password" name="passwd" id="passwd"><br>
+        <!-- button태그는 기본이벤트 타입이 submit -->
+        <button onclick="loginCheck(event)">로그인</button>
+    </form>
+    
+</body>
+</html>

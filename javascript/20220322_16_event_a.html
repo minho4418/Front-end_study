@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function move(e, ele){
+            //기본 이벤트를 삭제
+            //a 기본이벤트는 href 값으로 이동 
+            e.preventDefault();
+
+            console.log(ele.href);
+            //확인창
+            var result = confirm('이동하시겠습니까?');
+            if (result){
+                //location 객체를 이용해서 이동:a태그의 href속성을 읽어와서 적용
+                location.href = ele.href;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>하이퍼링크 onclick이벤트</h2>
+    <table border="1">
+        <tr>
+            <td> <a href="https://www.naver.com/" onclick="move(event, this)"><img src="../html/images/naver.jfif" width="100"> </a> </td>
+            <td> <a href="https://www.google.com/" onclick="move(event, this)"><img src="../html/images/google.jfif" width="100"> </a> </td>
+        </tr>
+    </table>
+
+</body>
+</html>
