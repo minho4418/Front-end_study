@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>수정</h2>
+    <form name="frmModify" action="">
+        <table border="1">
+            <tr>
+                <th>상품코드</th>
+                <td> <input type="text" name="pcode" readonly></td>
+            </tr>
+            <tr>
+                <th>상품명</th>
+                <td> <input type="text" name="pname"></td>
+            </tr>
+            <tr>
+                <th>단가</th>
+                <td> <input type="text" name="price"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button>수정</button>
+                    <button type="reset">취소</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        var data = {
+            pcode:'8801',
+            pname:'새우깡',
+            price:1200
+        }
+        frmModify.pcode.value = data.pcode;
+        frmModify.pname.value = data.pname;
+        frmModify.price.value = data.price;
+    </script>
+</body>
+</html>

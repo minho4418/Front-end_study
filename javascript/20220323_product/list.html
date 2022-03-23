@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //상품리스트 조회
+        function productList(){
+            //데이타
+            const data =[
+                {
+                    pcode:'8801',
+                    pname:'새우깡',
+                    price : 1200
+                 },
+                 {
+                    pcode:'8802',
+                    pname:'감자깡',
+                    price : 1300
+                 },
+                 {
+                    pcode:'8803',
+                    pname:'라면',
+                    price : 1500
+                 },
+            ];
+            console.log(data);
+            //for문
+            // for(var i=0; i<data.length; i++){
+            //     console.log(data[i].pcode);
+            //     console.log(data[i].pname);
+            //     console.log(data[i].price);
+            // }
+            //foreach문
+            var plist = document.getElementById('plist');
+            plist.innerHTML = '';
+            data.forEach((obj) => {
+                console.log(obj.price);
+                // <tr>
+                //     <td>8801</td>
+                //     <td>새우깡</td>
+                //     <td>1200</td>
+                // </tr>
+                
+                var tr = document.createElement('tr');
+                var td = document.createElement('td');
+                td.innerText = obj.pcode;
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = obj.pname;
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = obj.price;
+                tr.appendChild(td);
+                console.log(tr)
+                
+                plist.appendChild(tr);
+                console.log(plist);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>상품리스트</h2>
+    <button onclick="productList()">조회</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>상품코드</th>
+                <th>상품명</th>
+                <th>단가</th>
+            </tr>
+        </thead>
+        <tbody id="plist">
+
+        </tbody>
+        
+    </table>
+</body>
+</html>

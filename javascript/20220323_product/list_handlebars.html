@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 핸들바 탬플릿 cdn연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <!-- 탬플릿 소스 만들기 -->
+    <script id="plistTemplate" type="text/x-handlebars-template">
+        {{#each .}}
+            <tr>
+                <td><a href="modify.html" class="aPcode">{{pcode}}</a></td>
+                <td>{{pname}}</td>
+                <td>{{price}}</td>
+                <td align="center"><input type="checkbox"></td>
+            </tr>
+        {{/each}} 
+    </script>
+    <script>
+        //상품리스트 조회
+        function productList(){
+           //데이타
+           const data =[
+                {
+                    pcode:'8801',
+                    pname:'새우깡',
+                    price : 1200
+                 },
+                 {
+                    pcode:'8802',
+                    pname:'감자깡',
+                    price : 1300
+                 },
+                 {
+                    pcode:'8803',
+                    pname:'라면',
+                    price : 1500
+                 },
+            ];
+            // 템플릿 소스를 이용해서 태그만들기
+            var source = document.getElementById('plistTemplate').innerHTML;
+            console.log(source);
+            var template = Handlebars.compile(source);
+            var result = template(data);
+            console.log(result)
+            document.getElementById('plist').innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <h2>상품리스트(핸들바이용)</h2>
+    <button onclick="productList()">조회</button>
+    <table id="product" border="1">
+        <thead>
+            <tr>
+                <th>상품코드</th>
+                <th>상품명</th>
+                <th>단가</th>
+                <th><button onclick="">삭제</button></th>
+            </tr>
+        </thead>
+        <tbody id="plist">
+
+        </tbody>
+        
+    </table>
+</body>
+</html>
