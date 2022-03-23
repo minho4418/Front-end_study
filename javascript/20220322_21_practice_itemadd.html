@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //저장버튼을 클릭했을때
+        function addCheck(){
+            var pcode = frmAdd.pcode;
+            var pname = frmAdd.pname;
+            var price = frmAdd.price;
+            console.log(pcode);
+            if (pcode.value==''){
+                alert('상품코드를 입력해 주세요');
+                pcode.focus();
+            }else if (pname.value==''){
+                alert('상품명을 입력해 주세요');
+                pname.focus();
+            }else if (price.value==''){
+                alert('단가를 입력해 주세요');
+                price.focus();
+            }else{
+                frmAdd.submit();
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h2>상품등록</h2>
+    <!-- 상품코드,상품명, 단가 : 버튼클릭시 유효성체크-->
+    <form name="frmAdd" action="">
+        <table>
+            <tr>
+                <th>상품코드</th>
+                <td> <input type="text" name="pcode"> </td>
+            </tr>
+            <tr>
+                <th>상품명</th>
+                <td> <input type="text" name="pname"> </td>
+            </tr>
+            <tr>
+                <th>단가</th>
+                <td> <input type="number" name="price"> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="addCheck()">저장</button>
+                    <button type="reset">취소</button>
+                </td>
+            </tr>           
+        </table>
+
+
+    </form>
+</body>
+</html>
