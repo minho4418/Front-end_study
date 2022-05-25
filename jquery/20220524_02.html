@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <h2>속성 바꾸기</h2>
+    <div class="move">
+        <a href="" id="naver">네이버</a>
+        <a href="" id="google">구글</a>
+    </div>
+
+    <script>
+        $('#naver').css('color', 'red')
+            .attr('href', 'https://www.naver.com/');
+        
+        $('#google').css('background-color', 'yellow')
+            .attr('href', 'https://www.google.com/');
+
+
+        //자식중  a태그의 첫번째 href속성
+        //alert($('.move a:first').attr('href'));
+        //
+        $('.move a').first().css('color', 'pink')
+            .next().css('color', 'blue'); //다음엘리먼트 선택
+
+
+    </script>
+</body>
+</html>
