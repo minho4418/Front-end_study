@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+
+</head>
+<body>
+    <h2>스킬 목록</h2>
+    <input type="text" class="txtSkill">
+    <button id="btnAdd">추가</button>
+    <hr>
+    <ol id="skills"></ol>
+    <script>
+        $('#btnAdd').on('click', ()=>{
+            const skill = $('.txtSkill').val();
+            console.log(skill);
+            //1)엘리먼트 문자열까지 추가
+            //$('#skills').append('<li>'+skill+'</li>'); //목록에 추가
+            //2)엘리먼트 생성후 추가
+            let li = $('<li/>').append(skill);
+            $('#skills').append(li);
+
+            //input 지우고 이동하기
+            $('.txtSkill').val('').focus();
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+
+</head>
+<body>
+    <h2>이벤트</h2>
+    <img id="myimg" alt="" src="">
+    <hr>
+    <button id="monkey">원숭이</button>
+    <button id="butterfly">나비</button>
+    <button id="girl" >소녀</button>
+    <script>
+        //속성변경
+        $('#myimg').attr('src', '../html/images/animal.jpg')
+            .attr('alt', '사진없음')
+            .attr('width', '200px');
+
+        //이벤트달기(on메소드이용)
+        // $('#monkey').on('click',function(){
+        //     $('#myimg').attr('src', '../html/images/animal.jpg');
+        // });
+        //동적으로 생성된 엘리먼트에 이벤트 달수있다
+        // $('#butterfly').on('click', function(){
+        //     //alert('on');
+        //     $('#myimg').attr('src', '../html/images/butterfly.png');
+        // });
+
+        // $('#girl').on('click', function(){
+        //     $('#myimg').attr('src', '../html/images/girl.png');
+        // });
+
+        //이벤트달기(click메소드):동적으로 생성된 엘리먼트에 이벤트 달기 불가
+        $('#butterfly').click(function(){
+            //alert('click');
+            $('#myimg').attr('src', '../html/images/butterfly.png');
+        });
+
+
+    </script>
+</body>
+</html>

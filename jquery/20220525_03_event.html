@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        #box{
+            display: flex;
+        }
+        .sbox{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>상자의 색상 바꾸기</h2>
+    <div id="box">
+        <div class="sbox sbox1"></div>
+        <div class="sbox sbox2"></div>
+        <div class="sbox sbox3"></div>
+    </div>
+    <script>
+        //색상을 토글 함수
+        //매개변수:선택자, 현재칼라, 변경칼라
+        function changeColor(sel, chgColor){
+            let curColor = $(sel).css('background-color');
+            if (curColor=='rgb(0, 0, 0)') //칼라가 검정이라면
+                $(sel).css('background-color', chgColor); //red로 변경
+            else
+                $(sel).css('background-color', 'black'); //black로 변경
+        }
+
+        $('.sbox1').click(function(){
+            //속한 객체 :this
+            changeColor(this,'red');
+        });
+
+        $('.sbox2').click(function(){
+            //속한 객체 :this
+            changeColor(this, 'blue');
+        });
+
+        $('.sbox3').click(function(){
+            //속한 객체 :this
+            changeColor(this, 'green');
+        });
+
+    </script>
+</body>
+</html>
