@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 cdn 연결 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     -->
+    <script src="./js/jquery-3.6.0.js"></script>
+
+    <script>
+        $(function(){
+            //지역리스트 배열
+            const arr= [
+                {code:'01', name:'서울'},
+                {code:'02', name:'인천'},
+                {code:'03', name:'광주'},
+                {code:'04', name:'부산'},
+                {code:'05', name:'논산'},
+            ];
+            //구조분해
+            // var {code, name} = arr[0];
+            // console.log(code, name);
+            $(arr).each(function(i,obj){
+                //console.log(i,obj);//index, object
+                var {code, name} = obj;
+                console.log(code, name);
+                //ol태그 사이에 넣기
+                $('#areas').append('<li>[' + code +']'+ name + '</li>');
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <h2>지역리스트</h2>
+    <ol id="areas"></ol>
+</body>
+</html>

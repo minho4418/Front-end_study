@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <script>
+        $(function(){
+            //폰트 사이즈 변경 함수 만들어 보기
+            
+
+            //점점크게 버튼을 클릭했을때
+            $('#sizeup').click(function(){
+                let size = $('.text').css('font-size');//읽어오기
+                size = parseFloat(size);
+                console.log(size);
+                $('.text').css('font-size', size+1 +'px');//저장하기
+            });
+
+            //점점작게 버튼을 클릭했을때
+            $('#sizedown').click(function(){
+                let size = $('.text').css('font-size');//읽어오기
+                size = parseFloat(size);
+                console.log(size);
+                $('.text').css('font-size', size-1 +'px');//저장하기
+            });
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <button id="sizeup">점점크게</button>
+    <button id="sizedown">점점작게</button>
+    <hr>
+    <span class="text">제이쿼리</span>
+</body>
+</html>
